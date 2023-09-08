@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "YouTube Max Quality",
+    "version": "1.0",
+    "description": "Automatically selects the maximum available quality on YouTube", 
+    "permissions": ["storage", "activeTab"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["*://www.youtube.com/*"],
+            "js": ["content.js"]
+        }
+    ],
+    "icons": {
+        "48": "icon.png"
+    }
+}
